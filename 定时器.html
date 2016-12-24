@@ -5,9 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-
+<div id="clock"></div>
+<button onclick="int=clearInterval(int)">停止</button>
 <script>
-
+var int=self.setInterval("clock()",1000);
+function clock() {
+    var d=new Date();
+    var t=d.toLocaleTimeString();
+    document.getElementById('clock').innerHTML=t;
+}
 
 </script>
 </body>
