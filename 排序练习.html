@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    var ary=[1,7,5,3,8,2,4,6];
+//    var quickSort=function(arr){
+//        if(arr.length<=1){return arr};
+//        var pivotIndex=Math.floor(arr.length/2);
+//        var pivot= arr.splice(pivotIndex,1)[0];
+////        console.log(pivot);
+//        var left=[];
+//        var right=[];
+//        for(var i=0;i<arr.length;i++){
+//            if(arr[i]<pivot){
+//                left.push(arr[i]);
+//            }else{
+//                right.push(arr[i]);
+//            }
+//        }
+//        return quickSort(left).concat([pivot],quickSort(right));
+//    };
+//    var res=quickSort(ary);
+//    console.log(res);
+
+var ary=[1,2,3,3,4,4,5];
+//    for(var i=0;i<ary.length;i++){
+//        var cur=ary[i];
+//        for(j=i+1;j<ary.length;j++){
+//            if(cur==ary[j]){
+//                ary.splice(j,1);
+//                j--;
+//            }
+//        }
+//    }
+//console.log(ary);
+//
+    var ED=function(arr){
+        for(var i=0;i<arr.length;i++){
+            var cur=arr[i];
+            for(var j=i+1;j<arr.length;j++){
+                if(cur==arr[j]){
+                    arr.splice(j,1);
+                    j--;
+                }
+            }
+        }
+        return arr;
+    };
+    var res=ED(ary);
+    console.log(res)
+</script>
+</body>
+</html>
